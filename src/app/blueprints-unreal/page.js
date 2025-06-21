@@ -20,7 +20,7 @@ export default function UnrealBlueprintsPage() {
         {/* Introduction/Overview for Unreal Engine Blueprint Coding */}
         <div className="rounded-lg p-6 backdrop-blur-md mb-8 text-center">
           <p className="text-lg text-gray-300 items-center justify-center font-ovo">
-            This section showcases my proficiency in Unreal Engine's Blueprint visual scripting. I focus on creating robust, scalable, and intuitive gameplay systems, interactive mechanics, and UI/UX flows, demonstrating how visual scripting can power complex game features efficiently.
+            This section showcases my proficiency in Unreal Engine&apos;s Blueprint visual scripting. I focus on creating robust, scalable, and intuitive gameplay system&apos;s, interactive mechanics, and UI/UX flows, demonstrating how visual scripting can power complex game features efficiently.
           </p>
         </div>
 
