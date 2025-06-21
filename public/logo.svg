@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.49 88.45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        font-size: 46.39px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: Sylfaen, Sylfaen;
+      }
+
+      .cls-3 {
+        font-size: 24.53px;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(0 61.04) scale(.88 1)"><tspan x="0" y="0">Charlie</tspan></text>
+  <text class="cls-3" transform="translate(4.65 81.22) scale(.93 1)"><tspan x="0" y="0">Ash-Farmer</tspan></text>
+  <path class="cls-1" d="M14.15,9.25c2.47-.96,5.16-1.12,7.8-1.37,3.94-.37,7.86-.96,11.73-1.81,1.41-.31,2.84-.67,4.09-1.39,2.37-1.36,4.02-3.97,6.66-4.69"/>
+</svg>
