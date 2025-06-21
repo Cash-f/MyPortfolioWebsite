@@ -4,7 +4,7 @@ import './globals.css';
 
 
 const ovoFont = localFont({
-  src: './fonts/ovo.woff',
+  src: './fonts/Ovo.woff',
   display: 'swap',
   variable: '--font-ovo',
 });
