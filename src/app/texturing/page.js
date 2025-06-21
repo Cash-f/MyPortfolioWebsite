@@ -28,7 +28,7 @@ export default function TexturingPage() {
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Project Title One: [e.g., Sci-Fi Panel Textures]</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A detailed description of this texturing project. Discuss the techniques used (e.g., Substance Painter/Designer, Photoshop), material focus (e.g., metallic, rough, worn), and how these textures enhance the model's appearance.
+            A detailed description of this texturing project. Discuss the techniques used (e.g., Substance Painter/Designer, Photoshop), material focus (e.g., metallic, rough, worn), and how these textures enhance the model&apos;s appearance.
           </p>
           <div className="w-full h-[60vh] bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
                style={{ minHeight: '400px' }}>

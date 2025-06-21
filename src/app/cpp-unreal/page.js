@@ -32,7 +32,7 @@ export default function UnrealCppPage() {
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Code Example One: Custom Character Movement Component</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A detailed description of this C++ code example. Explain the problem it solves, the design patterns used, performance considerations, and how it integrates with Unreal Engine's framework.
+            A detailed description of this C++ code example. Explain the problem it solves, the design patterns used, performance considerations, and how it integrates with Unreal Engine&apos;s framework.
           </p>
           <div className="w-full bg-gray-800 rounded-lg overflow-hidden relative mb-12"
                style={{ minHeight: '300px' }}>

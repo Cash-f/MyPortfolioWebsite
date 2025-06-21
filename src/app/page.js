@@ -70,7 +70,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Hello, I'm Charlie
+              Hello, I&apos;m Charlie
             </motion.h2>
 
             <motion.p
@@ -79,7 +79,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              I'm a game developer practicing 3D asset creation and gameplay
+              I&apos;m a game developer practicing 3D asset creation and gameplay
               engineering. Welcome to my portfolio.
             </motion.p>
           </div>

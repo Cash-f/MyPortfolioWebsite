@@ -20,7 +20,7 @@ export default function EnvironmentalArtPage() {
         {/* Introduction/Overview for Environmental Art */}
         <div className="rounded-lg p-6 backdrop-blur-md mb-8 text-center">
           <p className="text-lg text-gray-300 items-center justify-center font-ovo">
-            Here you'll find a collection of my environmental art projects, focusing on creating immersive and detailed game worlds. From natural landscapes to bustling cityscapes, I strive to build compelling backdrops that enhance gameplay and storytelling.
+            Here you&apos;ll find a collection of my environmental art projects, focusing on creating immersive and detailed game worlds. From natural landscapes to bustling cityscapes, I strive to build compelling backdrops that enhance gameplay and storytelling.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function EnvironmentalArtPage() {
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Project Title Two: [e.g., Mystical Forest Clearing]</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A description for your second environmental art project. Detail the design process, inspiration, and specific elements that contribute to the scene's atmosphere.
+            A description for your second environmental art project. Detail the design process, inspiration, and specific elements that contribute to the scene&apos;s atmosphere.
           </p>
           <div className="w-full h-[60vh] bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
                style={{ minHeight: '400px' }}>
