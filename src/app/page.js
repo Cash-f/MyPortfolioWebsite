@@ -144,7 +144,7 @@ export default function Home() {
           </div>
 
           <motion.button
-            className="bg-black text-white px-6 py-2 rounded-xl hover:bg-gray-700 transition"
+            className="bg-white text-white px-6 py-2 rounded-xl hover:bg-gray-700 transition"
             whileHover={{ scale: 1.05 }}
             onClick={() => router.push('/projects')}
           >
