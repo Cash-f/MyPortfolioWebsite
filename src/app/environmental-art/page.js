@@ -26,32 +26,85 @@ export default function EnvironmentalArtPage() {
 
         {/* First Environmental Art Showcase */}
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
-          <h2 className="text-3xl font-ovo mb-4 text-center">Project Title One: [e.g., Abandoned Industrial Zone]</h2>
+          <h2 className="text-3xl font-ovo mb-4 text-center">Abandoned Industrial Zone</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A detailed description of this environmental art project. Discuss the mood, techniques used, software, and any challenges or unique aspects.
+            This render aims to immerses the viewer in a sprawling, automated factory floor, where a brightly lit conveyor belt carries vibrant yellow objects beneath the imposing presence of robotic arms. 
+            Adding atmospheric volumetric lighting, combined with thick fog enhances the sense of scale and the repetitive nature of industrial production. 
+            The largely monochromatic palette, punctuated by the striking yellow products and subtle red operational lights, effectively conveys a mood of gritty efficiency.
           </p>
-          <div className="w-full h-[60vh] bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
+          <div className="w-full h-[60vh]  rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
                style={{ minHeight: '400px' }}>
-            {/* Placeholder for an image or image carousel */}
-            <p>Placeholder for Environmental Art Image 1 (e.g., `Image` component or `img` tag)</p>
-            {/* Example: <img src="/images/environment-art-1.jpg" alt="Environmental Art Scene 1" className="w-full h-full object-cover" /> */}
+            
+             <img
+                    src="/factoryscene.png" 
+                    alt="Factory Scene"
+                    className="rounded-lg object-contain w-full h-full"
+                /> 
           </div>
         </div>
 
         {/* Second Environmental Art Showcase */}
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
-          <h2 className="text-3xl font-ovo mb-4 text-center">Project Title Two: [e.g., Mystical Forest Clearing]</h2>
+          <h2 className="text-3xl font-ovo mb-4 text-center">Forest Clearing</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A description for your second environmental art project. Detail the design process, inspiration, and specific elements that contribute to the scene&apos;s atmosphere.
+            This render captures a mysterious scene within a forest clearing, bathed in an almost apocalyptic red-orange light that immediately establishes a dramatic mood. 
+            A weathered wooden table in the foreground, adorned with survival-oriented tools like a flashlight and axe, draws the viewer's eye into a narrative of isolation or urgent activity. 
+            The meticulous texturing on the tools and table, hints at a story unfolding in the depths of a remote wilderness.
           </p>
           <div className="w-full h-[60vh] bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
                style={{ minHeight: '400px' }}>
-            {/* Placeholder for an image or image carousel */}
-            <p>Placeholder for Environmental Art Image 2 (e.g., `Image` component or `img` tag)</p>
-            {/* Example: <img src="/images/environment-art-2.jpg" alt="Environmental Art Scene 2" className="w-full h-full object-cover" /> */}
+
+                <img
+                    src="/ForestClearing.png" 
+                    alt="Forest Scene"
+                    className="rounded-lg object-contain w-full h-full"
+                />
+            
           </div>
         </div>
 
+
+        {/* Third Environmental Art Showcase */}
+        <div className="rounded-lg p-6 backdrop-blur-md mb-8">
+          <h2 className="text-3xl font-ovo mb-4 text-center">Beachside Sunset</h2>
+          <p className="text-lg text-gray-300 font-ovo mb-6">
+            This render masterfully blends a warm, desaturated palette with a low-angle composition to create a strikingly atmospheric scene of a beach at dusk. 
+            The prominent campfire and abandoned AK-47 rifle, strategically positioned against a table and framed by the expansive ocean and a setting sun, immediately evoke a sense of quiet tension and an untold narrative of survival or a temporary outpost. 
+            Effective use of PBR textures is used to show the detailed metallic and stone surfaces, while the overall lighting highlights the scene's desolate yet compelling mood.
+          </p>
+          <div className="w-full h-[60vh]  rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
+               style={{ minHeight: '400px' }}>
+
+                <img
+                    src="/BeachCampfire.png" 
+                    alt="Beach Scene"
+                    className="rounded-lg object-contain w-full h-full"
+                />
+            
+          </div>
+        </div>
+
+        
+        
+        {/*
+        
+        
+        
+        
+        
+        
+        space for more environmental art showcases if needed
+        
+        
+        
+        
+        
+        
+        */}
+        
+        
+        
+        
         {/* General conclusion/additional content */}
         <div className="rounded-lg p-6 backdrop-blur-md mt-8 flex align-middle justify-center items-center text-center">
           <p className="text-lg text-gray-300 font-ovo">
@@ -63,7 +116,7 @@ export default function EnvironmentalArtPage() {
         <div className="flex justify-center mt-12 mb-8">
           <button
             onClick={() => router.push('/projects')}
-            className="bg-gray-700 text-white px-8 py-3 rounded-full hover:bg-gray-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 font-ovo text-lg"
+            className=" text-white px-8 py-3 rounded-full transition duration-300 ease-in-out focus:outline-none focus:ring-2  focus:ring-opacity-75 font-ovo text-lg"
           >
             Return to Projects
           </button>

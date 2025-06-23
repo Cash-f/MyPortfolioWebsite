@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer
-      className="bg-black text-gray-400 text-center py-6 mt-auto relative"
+      className="bg-black  text-gray-400 text-center py-6 mt-auto relative"
       style={{
         background:
           'linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent), black',
