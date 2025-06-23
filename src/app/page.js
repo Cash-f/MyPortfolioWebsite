@@ -13,7 +13,7 @@ import ParticleBackground from './components/ParticleBackground';
 const softwareTools = [
   { name: 'Blender', file: 'blender.png', experience: 'Advanced' },
   { name: 'Unreal Engine', file: 'unreal.png', experience: 'Advanced' },
-  { name: 'Unity', file: 'unity.png', experience: 'Basic' },
+  { name: 'Unity', file: 'unity', experience: 'Basic' },
   { name: 'Substance Painter', file: 'substance-painter.png', experience: 'Intermediate' },
   { name: 'Substance Designer', file: 'substance-designer.png', experience: 'Basic' },
 ];
@@ -97,23 +97,23 @@ export default function Home() {
 
           
           <div
-            className="rounded-lg p-6 backdrop-blur-md flex items-center justify-center space-x-8 mb-2 px-12"
-            style={{ minHeight: '400px' }}
+            className="rounded-lg p-6 backdrop-blur-md flex items-center justify-center mb-2 px-12 md:px-24 lg:px-32 w-full"
+            style={{ minHeight: '600px' }}
           >
             <button
               onClick={prevItem}
               className="text-white hover:text-gray-300 transition mx-2 z-20"
             >
-              <ChevronLeft size={32} />
+              <ChevronLeft size={48} />
             </button>
 
-            <div className="flex items-center justify-center gap-10 mx-6">
+            <div className="flex items-center justify-center flex-grow">
               {carouselItems.map((item, index) => {
                 const isActive = index === current;
                 return (
                   <motion.div
                     key={item.id}
-                    className={`flex flex-col items-center justify-center transition-all duration-300 ${
+                    className={`flex flex-col items-center justify-center transition-all duration-300 mx-4 lg:mx-8 ${
                       isActive ? 'scale-110' : 'scale-90 opacity-50'
                     }`}
                     animate={{
@@ -124,8 +124,8 @@ export default function Home() {
                     <Image
                       src={item.src}
                       alt={item.alt}
-                      width={220}
-                      height={220}
+                      width={400}
+                      height={400}
                       className="object-contain rounded-lg"
                       priority={isActive}
                     />
@@ -139,17 +139,20 @@ export default function Home() {
               onClick={nextItem}
               className="text-white hover:text-gray-300 transition mx-2 z-20"
             >
-              <ChevronRight size={32} />
+              <ChevronRight size={48} />
             </button>
           </div>
 
-          <motion.button
-            className="bg-white text-white px-6 py-2 rounded-xl hover:bg-gray-700 transition"
-            whileHover={{ scale: 1.05 }}
-            onClick={() => router.push('/projects')}
-          >
-            View More Projects
-          </motion.button>
+          
+          <div className="flex border border-white rounded-xl items-center justify-center mt-4">
+            <motion.button
+              className="inner-button text-white px-6 py-2 rounded-xl  transition"
+              whileHover={{ scale: 1.2 }}
+              onClick={() => router.push('/projects')}
+            >
+              View More Projects
+            </motion.button>
+          </div>
 
           <div className="max-w-6xl w-full mx-auto mt-16 rounded-lg p-6 backdrop-blur-md">
             <div className="flex flex-col md:flex-row justify-center items-stretch overflow-hidden">
