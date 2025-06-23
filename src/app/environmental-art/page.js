@@ -48,7 +48,7 @@ export default function EnvironmentalArtPage() {
           <h2 className="text-3xl font-ovo mb-4 text-center">Forest Clearing</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
             This render captures a mysterious scene within a forest clearing, bathed in an almost apocalyptic red-orange light that immediately establishes a dramatic mood. 
-            A weathered wooden table in the foreground, adorned with survival-oriented tools like a flashlight and axe, draws the viewer's eye into a narrative of isolation or urgent activity. 
+            A weathered wooden table in the foreground, adorned with survival-oriented tools like a flashlight and axe, draws the viewer&apos;s eye into a narrative of isolation or urgent activity. 
             The meticulous texturing on the tools and table, hints at a story unfolding in the depths of a remote wilderness.
           </p>
           <div className="w-full h-[60vh] bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
@@ -70,7 +70,7 @@ export default function EnvironmentalArtPage() {
           <p className="text-lg text-gray-300 font-ovo mb-6">
             This render masterfully blends a warm, desaturated palette with a low-angle composition to create a strikingly atmospheric scene of a beach at dusk. 
             The prominent campfire and abandoned AK-47 rifle, strategically positioned against a table and framed by the expansive ocean and a setting sun, immediately evoke a sense of quiet tension and an untold narrative of survival or a temporary outpost. 
-            Effective use of PBR textures is used to show the detailed metallic and stone surfaces, while the overall lighting highlights the scene's desolate yet compelling mood.
+            Effective use of PBR textures is used to show the detailed metallic and stone surfaces, while the overall lighting highlights the scene&apos;s desolate yet compelling mood.
           </p>
           <div className="w-full h-[60vh]  rounded-lg overflow-hidden flex items-center justify-center text-gray-400 text-lg mb-12"
                style={{ minHeight: '400px' }}>
