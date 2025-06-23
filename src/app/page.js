@@ -12,8 +12,8 @@ import ParticleBackground from './components/ParticleBackground';
 
 const softwareTools = [
   { name: 'Blender', file: 'blender.png', experience: 'Advanced' },
-  { name: 'Unreal Engine', file: 'unreal.png', experience: 'Advanced' },
-  { name: 'Unity', file: 'unity', experience: 'Basic' },
+  { name: 'Unreal Engine', file: 'unity.png', experience: 'Advanced' },
+  { name: 'Unity', file: 'unity.png', experience: 'Basic' },
   { name: 'Substance Painter', file: 'substance-painter.png', experience: 'Intermediate' },
   { name: 'Substance Designer', file: 'substance-designer.png', experience: 'Basic' },
 ];
