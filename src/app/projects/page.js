@@ -121,7 +121,7 @@ export default function Projects() {
                     tabIndex={0}
                     onClick={() => router.push(route)}
                     onKeyDown={(e) => onKeyPressNavigate(e, route)}
-                    className="cursor-pointer select-none px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white transition-colors hover:bg-white hover:bg-opacity-10"
+                    className="cursor-pointer select-none px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white transition-colors  hover:bg-opacity-10"
                     aria-label={`Navigate to ${title}`}
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
