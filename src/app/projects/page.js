@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
@@ -79,20 +80,30 @@ export default function Projects() {
   };
 
   return (
-    <main className="pt-[80px] backdrop-blur-mdmin-h-screen bg-black text-white flex flex-col">
+    <main className="pt-[80px] min-h-screen bg-black text-white flex flex-col">
       <Header />
       <ParticleBackground />
 
-      <section className="flex-grow backdrop-blur-md max-w-7xl mx-auto w-full px-6 sm:px-12 md:px-20 py-12">
-        <h1 className="text-5xl  font-ovo mb-12 text-center">Projects</h1>
+      <section className="flex-grow max-w-7xl mx-auto w-full px-6 sm:px-12 md:px-20 py-12 backdrop-blur-2xl rounded-lg shadow-xl">
+        <motion.h1
+          className="text-4xl sm:text-5xl font-ovo mb-12 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Projects
+        </motion.h1>
 
-        <div className="flex flex-col md:flex-row w-full">
+        <div className="flex flex-col md:flex-row w-full gap-8 md:gap-0">
           {projectsData.map(({ mainTitle, subElements }, colIndex) => (
-            <div
+            <motion.div
               key={colIndex}
-              className={`relative flex-1 flex flex-col items-center text-center px-6 md:px-10 py-6 ${
-                colIndex < projectsData.length - 1 ? 'separator' : ''
+              className={`relative flex-1 flex flex-col items-center text-center px-4 sm:px-6 md:px-10 py-6 ${
+                colIndex < projectsData.length - 1 ? 'md:border-r border-white border-opacity-20' : ''
               }`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + colIndex * 0.3 }}
             >
               <h2 className="text-3xl font-ovo mb-6 relative">
                 {mainTitle}
@@ -102,23 +113,26 @@ export default function Projects() {
                 />
               </h2>
 
-              <div className="flex flex-col gap-8 w-full max-w-md">
+              <div className="flex flex-col gap-6 w-full max-w-md">
                 {subElements.map(({ title, description, route }, i) => (
-                  <div
+                  <motion.div
                     key={i}
                     role="button"
                     tabIndex={0}
                     onClick={() => router.push(route)}
                     onKeyDown={(e) => onKeyPressNavigate(e, route)}
-                    className="cursor-pointer select-none px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white transition-colors"
+                    className="cursor-pointer select-none px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-white transition-colors hover:bg-white hover:bg-opacity-10"
                     aria-label={`Navigate to ${title}`}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: 0.4 + i * 0.1 + colIndex * 0.3 }}
                   >
-                    <h3 className="text-2xl font-ovo mb-2">{title}</h3>
+                    <h3 className="text-2xl font-ovo mb-1">{title}</h3>
                     <p className="text-gray-300 font-ovo">{description}</p>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
