@@ -41,8 +41,8 @@ const projectsData = [
         route: '/cpp-unreal',
       },
       {
-        title: 'C# (Unity)',
-        description: 'I build gameplay mechanics and tools using C# scripting in Unity for versatile game development.',
+        title: 'C# (Unity) & Misc Scripting',
+        description: 'I build gameplay mechanics and tools using C# scripting in Unity for versatile game development. And various other languages for different engines, web development, or tools.',
         route: '/csharp-unity',
       },
     ],
@@ -80,7 +80,7 @@ export default function Projects() {
   };
 
   return (
-    <main className="pt-[80px] min-h-screen bg-black text-white flex flex-col">
+    <main className="pt-[80px] min-h-screen  text-white flex flex-col">
       <Header />
       <ParticleBackground />
 

@@ -40,7 +40,6 @@ export default function Home() {
   const isInView2 = useInView(ref2, { once: true, margin: '-100px' });
   const isInView3 = useInView(ref3, { once: true, margin: '-100px' });
 
-  // snapping carousel on mobile
   const scrollContainerRef = useRef(null);
   const itemRefs = useRef([]);
 
@@ -114,89 +113,93 @@ export default function Home() {
               Latest Projects
             </motion.p>
 
-            <div
-              className="relative rounded-lg p-4 sm:p-6 backdrop-blur-md flex items-center justify-center w-full"
-              style={{ minHeight: '400px' }}
-            >
-              {/* Previous gradient overlay - only visible on mobile */}
-              <button
-                onClick={prevItem}
-                aria-label="Previous project"
-                className="absolute top-0 left-0 z-30 h-full w-12 sm:hidden cursor-pointer"
-                style={{
-                  background: 'linear-gradient(to right, rgba(0,0,0,0.8), transparent)',
-                }}
-              />
+            {/* Start of Carousel Container with controlled blur and centering */}
+            <div className="relative w-full flex justify-center items-center" style={{ minHeight: '400px' }}>
+                {/* Outer container for the carousel, controls its overall width and centering */}
+                <div className="relative flex items-center justify-center max-w-fit mx-auto rounded-lg px-4 sm:px-6 z-10">
+                    {/* Background blur element - positioned absolutely within its relative parent */}
+                    <div className="absolute inset-0 rounded-lg backdrop-blur-md -z-10"></div> {/* Adjusted z-index */}
 
-              {/* Desktop Chevron Left */}
-              <button
-                onClick={prevItem}
-                aria-label="Previous project"
-                className="hidden sm:flex text-white hover:text-gray-300 transition z-20 mr-4"
-              >
-                <ChevronLeft size={48} />
-              </button>
+                    {/* Previous gradient overlay - only visible on mobile */}
+                    <button
+                        onClick={prevItem}
+                        aria-label="Previous project"
+                        className="absolute top-0 left-0 z-20 h-full w-12 sm:hidden cursor-pointer" // Adjusted z-index
+                        style={{
+                            background: 'linear-gradient(to right, rgba(0,0,0,0.8), transparent)',
+                        }}
+                    />
 
-              {/* Scrollable carousel container */}
-              <div
-                ref={scrollContainerRef}
-                className="flex overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory scroll-pl-1 sm:scroll-pl-0"
-                style={{ scrollSnapType: 'x mandatory' }}
-              >
-                {carouselItems.map((item, index) => {
-                  const isActive = index === current;
-                  return (
-                    <motion.div
-                      key={item.id}
-                      ref={(el) => (itemRefs.current[index] = el)}
-                      className={`flex-shrink-0 flex flex-col items-center justify-start mx-3 sm:mx-4
-                        snap-center
-                        transition-all duration-300
-                        ${isActive ? 'scale-100' : 'opacity-50'}
-                      `}
-                      animate={{
-                        opacity: isActive ? 1 : 0.5,
-                      }}
-                      style={{ width: '280px', height: '360px' }} // Adjust size as needed
+                    {/* Desktop Chevron Left */}
+                    <button
+                        onClick={prevItem}
+                        aria-label="Previous project"
+                        className="hidden sm:flex text-white hover:text-gray-300 transition z-20 mr-4"
                     >
-                      <motion.div
-                        className="relative w-full h-[280px]"
-                        animate={{ scale: isActive ? 1.1 : 0.9 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Image
-                          src={item.src}
-                          alt={item.alt}
-                          fill
-                          className="object-contain rounded-lg"
-                          priority={isActive}
-                        />
-                      </motion.div>
-                      <p className="mt-2 text-white text-base font-medium">{item.label}</p>
-                    </motion.div>
-                  );
-                })}
-              </div>
+                        <ChevronLeft size={48} />
+                    </button>
 
-              {/* Desktop Chevron Right */}
-              <button
-                onClick={nextItem}
-                aria-label="Next project"
-                className="hidden sm:flex text-white hover:text-gray-300 transition z-20 ml-4"
-              >
-                <ChevronRight size={48} />
-              </button>
+                    {/* Scrollable carousel items container */}
+                    <div
+                        ref={scrollContainerRef}
+                        className="flex overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory scroll-pl-1 sm:scroll-pl-0 flex-grow"
+                        style={{ scrollSnapType: 'x mandatory' }}
+                    >
+                        {carouselItems.map((item, index) => {
+                            const isActive = index === current;
+                            return (
+                                <motion.div
+                                    key={item.id}
+                                    ref={(el) => (itemRefs.current[index] = el)}
+                                    className={`flex-shrink-0 flex flex-col items-center justify-start mx-3 sm:mx-4
+                                    snap-center
+                                    transition-all duration-300
+                                    ${isActive ? 'scale-100' : 'opacity-50'}
+                                    `}
+                                    animate={{
+                                        opacity: isActive ? 1 : 0.5,
+                                    }}
+                                    style={{ width: '280px', height: '360px' }}
+                                >
+                                    <motion.div
+                                        className="relative w-full h-[280px]"
+                                        animate={{ scale: isActive ? 1.1 : 0.9 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <Image
+                                            src={item.src}
+                                            alt={item.alt}
+                                            fill
+                                            className="object-contain rounded-lg"
+                                            priority={isActive}
+                                        />
+                                    </motion.div>
+                                    <p className="mt-2 text-white text-base font-medium">{item.label}</p>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
 
-              {/* Next gradient overlay - only visible on mobile */}
-              <button
-                onClick={nextItem}
-                aria-label="Next project"
-                className="absolute top-0 right-0 z-30 h-full w-12 sm:hidden cursor-pointer"
-                style={{
-                  background: 'linear-gradient(to left, rgba(0,0,0,0.8), transparent)',
-                }}
-              />
-            </div>
+                    {/* Desktop Chevron Right */}
+                    <button
+                        onClick={nextItem}
+                        aria-label="Next project"
+                        className="hidden sm:flex text-white hover:text-gray-300 transition z-20 ml-4"
+                    >
+                        <ChevronRight size={48} />
+                    </button>
+
+                    {/* Next gradient overlay - only visible on mobile */}
+                    <button
+                        onClick={nextItem}
+                        aria-label="Next project"
+                        className="absolute top-0 right-0 z-20 h-full w-12 sm:hidden cursor-pointer" // Adjusted z-index
+                        style={{
+                            background: 'linear-gradient(to left, rgba(0,0,0,0.8), transparent)',
+                        }}
+                    />
+                </div>
+            </div> {/* End of Carousel Container with controlled blur and centering */}
 
             <div className="flex border border-white rounded-xl items-center justify-center mt-12">
               <motion.button
@@ -228,10 +231,10 @@ export default function Home() {
                   initial={{ opacity: 0, y: 40 }}
                   animate={isInView2 ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="flex-1 p-6 text-center relative 
-                    md:before:absolute md:before:top-0 md:before:bottom-0 md:before:left-0 md:before:w-[2px] 
-                    md:before:bg-gradient-to-b md:before:from-transparent md:before:via-white md:before:to-transparent 
-                    md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0 md:after:w-[2px] 
+                  className="flex-1 p-6 text-center relative
+                    md:before:absolute md:before:top-0 md:before:bottom-0 md:before:left-0 md:before:w-[2px]
+                    md:before:bg-gradient-to-b md:before:from-transparent md:before:via-white md:before:to-transparent
+                    md:after:absolute md:after:top-0 md:after:bottom-0 md:after:right-0 md:after:w-[2px]
                     md:after:bg-gradient-to-b md:after:from-transparent md:after:via-white md:after:to-transparent
                     before:pointer-events-none after:pointer-events-none"
                 >
