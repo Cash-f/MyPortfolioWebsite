@@ -5,10 +5,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
 import { useRouter } from 'next/navigation'; // Import useRouter
+import { motion } from 'framer-motion'; // Import motion for animations
 
-// Import SyntaxHighlighter and a theme
+// Import SyntaxHighlighter
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs'; // Choose a style, e.g., darcula, atomOneDark, dracula
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs'; 
 
 export default function UnityCsharpPage() {
   const router = useRouter(); // Initialize useRouter hook
@@ -21,18 +22,18 @@ export default function UnityCsharpPage() {
       <section className="flex-grow max-w-7xl mx-auto w-full px-6 sm:px-12 md:px-20 backdrop-blur-2xl py-12 z-10">
         <h1 className="text-5xl font-ovo mb-12 text-center">Unity C# Coding</h1>
         
-        {/* Introduction/Overview for Unity C# Coding */}
+        
         <div className="rounded-lg p-6 backdrop-blur-md mb-8 text-center">
           <p className="text-lg text-gray-300 items-center justify-center font-ovo">
             This section showcases my C# scripting abilities within Unity. I focus on developing efficient gameplay systems, interactive components, and robust game logic, demonstrating how C# can be used to build immersive and dynamic Unity projects.
           </p>
         </div>
 
-        {/* First C# Code Showcase */}
+        
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Code Example One: Player Controller Script</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A detailed description of this C# player controller script. Explain the movement logic, input handling, and how it ensures smooth and responsive player control within a Unity scene.
+            A detailed description of this C# player controller script. Placeholder WIP
           </p>
           <div className="w-full bg-gray-800 rounded-lg overflow-hidden relative mb-12"
                style={{ minHeight: '300px' }}>
@@ -77,11 +78,11 @@ public class PlayerController : MonoBehaviour
           </div>
         </div>
 
-        {/* Second C# Code Showcase */}
+        
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Code Example Two: Simple Inventory System Logic</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A description for your second C# code example. Explain the core functionality of the inventory system, how items are managed, and its extensibility for different item types.
+            Placeholder WIP
           </p>
           <div className="w-full bg-gray-800 rounded-lg overflow-hidden relative mb-12"
                style={{ minHeight: '300px' }}>
@@ -146,22 +147,29 @@ public class Inventory : MonoBehaviour
           </div>
         </div>
 
-        {/* General conclusion/additional content */}
+        
         <div className="rounded-lg p-6 backdrop-blur-md mt-8 flex align-middle justify-center items-center text-center">
           <p className="text-lg text-gray-300 font-ovo">
-            My C# scripting in Unity focuses on creating clean, modular, and efficient code that powers engaging gameplay experiences and robust game systems.
+            Placeholder WIP
           </p>
         </div>
 
-        {/* Return to Projects Button */}
-        <div className="flex justify-center mt-12 mb-8">
-          <button
-            onClick={() => router.push('/projects')}
-            className="bg-gray-700 text-white px-8 py-3 rounded-full hover:bg-gray-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 font-ovo text-lg"
-          >
-            Return to Projects
-          </button>
-        </div>
+        <motion.div
+                          className="flex justify-center mt-10 sm:mt-12 mb-8"
+                          initial={{ opacity: 0, y: 30 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5 }}
+                          viewport={{ once: true }}
+                        >
+                          <div className="flex justify-center mt-12">
+                            <a
+                              href="/projects"
+                              className="text-white px-8 py-3 rounded-full bg-black border border-white transition duration-300 ease-in-out font-ovo text-lg shadow-lg"
+                            >
+                              View My Projects
+                            </a>
+                          </div>
+                        </motion.div>
       
       </section>
 

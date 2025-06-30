@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ParticleBackground from '../components/ParticleBackground';
 import { useRouter } from 'next/navigation'; // Import useRouter
+import { motion } from 'framer-motion'; // Import motion for animations
 
 // Import SyntaxHighlighter and a theme
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -32,7 +33,7 @@ export default function UnrealCppPage() {
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Code Example One: Custom Character Movement Component</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A detailed description of this C++ code example. Explain the problem it solves, the design patterns used, performance considerations, and how it integrates with Unreal Engine&apos;s framework.
+            Placeholder WIP
           </p>
           <div className="w-full bg-gray-800 rounded-lg overflow-hidden relative mb-12"
                style={{ minHeight: '300px' }}>
@@ -81,7 +82,7 @@ void UCustomMovementComponent::SetSprinting(bool bNewSprinting)
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
           <h2 className="text-3xl font-ovo mb-4 text-center">Code Example Two: Interaction System Logic</h2>
           <p className="text-lg text-gray-300 font-ovo mb-6">
-            A description for your second C++ code example. Explain the core functionality, event handling, data structures used, and how it provides a flexible framework for in-game interactions.
+            Placeholder WIP
           </p>
           <div className="w-full bg-gray-800 rounded-lg overflow-hidden relative mb-12"
                style={{ minHeight: '300px' }}>
@@ -133,22 +134,30 @@ void APlayerCharacter::PerformInteraction()
           </div>
         </div>
 
-        {/* General conclusion/additional content */}
+        
         <div className="rounded-lg p-6 backdrop-blur-md mt-8 flex align-middle justify-center items-center text-center">
           <p className="text-lg text-gray-300 font-ovo">
             My C++ work in Unreal Engine focuses on creating scalable and performant solutions, from low-level systems to intricate gameplay mechanics, ensuring stability and efficiency in any project.
           </p>
         </div>
 
-        {/* Return to Projects Button */}
-        <div className="flex justify-center mt-12 mb-8">
-          <button
-            onClick={() => router.push('/projects')}
-            className="bg-gray-700 text-white px-8 py-3 rounded-full hover:bg-gray-600 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 font-ovo text-lg"
-          >
-            Return to Projects
-          </button>
-        </div>
+        
+        <motion.div
+                  className="flex justify-center mt-10 sm:mt-12 mb-8"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex justify-center mt-12">
+                    <a
+                      href="/projects"
+                      className="text-white px-8 py-3 rounded-full bg-black border border-white transition duration-300 ease-in-out font-ovo text-lg shadow-lg"
+                    >
+                      View My Projects
+                    </a>
+                  </div>
+                </motion.div>
       
       </section>
 
