@@ -17,7 +17,7 @@ export default function UnrealBlueprintsPage() {
       <Header />
 
       <section className="flex-grow max-w-7xl mx-auto w-full px-6 sm:px-12 md:px-20 backdrop-blur-2xl py-12 z-10">
-        <h1 className="text-5xl font-ovo mb-12 text-center text-4xl sm:text-5xl">
+        <h1 className="text-5xl font-ovo mb-12 text-center sm:text-5xl">
           Unreal Engine Blueprint Coding
         </h1>
 
@@ -28,7 +28,7 @@ export default function UnrealBlueprintsPage() {
         </div>
 
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
-          <h2 className="text-3xl font-ovo mb-4 text-center text-2xl sm:text-3xl">
+          <h2 className="text-3xl font-ovo mb-4 text-center sm:text-3xl">
             Zombie Wave System & Logic
           </h2>
           <p className="text-lg text-center text-gray-300 font-ovo mb-2">
@@ -53,7 +53,7 @@ export default function UnrealBlueprintsPage() {
           ))}
         </div>
 
-        <h1 className="text-5xl font-ovo mb-12 text-center text-4xl sm:text-5xl">
+        <h1 className="text-5xl font-ovo mb-12 text-center sm:text-5xl">
           Code Analysis
         </h1>
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
@@ -92,7 +92,7 @@ export default function UnrealBlueprintsPage() {
         </div>
 
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
-          <h2 className="text-3xl font-ovo mb-4 mt-8 text-center text-2xl sm:text-3xl">
+          <h2 className="text-3xl font-ovo mb-4 mt-8 text-center sm:text-3xl">
             Modular Weapon System
           </h2>
           <p className="text-lg text-center text-gray-300 font-ovo mb-6">
@@ -124,7 +124,7 @@ export default function UnrealBlueprintsPage() {
           ))}
         </div>
 
-        <h1 className="text-5xl font-ovo mb-12 text-center text-4xl sm:text-5xl">
+        <h1 className="text-5xl font-ovo mb-12 text-center sm:text-5xl">
           Code Analysis
         </h1>
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
@@ -168,7 +168,7 @@ export default function UnrealBlueprintsPage() {
 
         {/* Interactive Door System */}
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
-          <h2 className="text-3xl font-ovo mb-4 mt-8 text-center text-2xl sm:text-3xl">
+          <h2 className="text-3xl font-ovo mb-4 mt-8 text-center sm:text-3xl">
             Interactive Door System
           </h2>
           <p className="text-lg text-center text-gray-300 font-ovo mb-6">
@@ -195,7 +195,7 @@ export default function UnrealBlueprintsPage() {
           ))}
         </div>
 
-        <h1 className="text-5xl font-ovo mb-12 text-center text-4xl sm:text-5xl">
+        <h1 className="text-5xl font-ovo mb-12 text-center sm:text-5xl">
           Code Analysis
         </h1>
         <div className="rounded-lg p-6 backdrop-blur-md mb-8">
